@@ -146,6 +146,7 @@ button.menu-sub-btn { flex: 1; padding: 8px; font-size: 11px; cursor: pointer; }
             ctx.beginPath();
 
             if (s === 'star') {
+                const rr = r * 1.8;   // star専用サイズ
                 for(let i=0; i<5; i++) {
                     ctx.lineTo(p.x + r * Math.cos((18+i*72)/180*Math.PI), p.y - r * Math.sin((18+i*72)/180*Math.PI));
                     ctx.lineTo(p.x + (r/2.2) * Math.cos((54+i*72)/180*Math.PI), p.y - (r/2.2) * Math.sin((54+i*72)/180*Math.PI));
