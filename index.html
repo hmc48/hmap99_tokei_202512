@@ -147,9 +147,22 @@ button.menu-sub-btn { flex: 1; padding: 8px; font-size: 11px; cursor: pointer; }
 
             if (s === 'star') {
                 const rr = r * 1.8;   // star専用サイズ
-                for(let i=0; i<5; i++) {
-                    ctx.lineTo(p.x + r * Math.cos((18+i*72)/180*Math.PI), p.y - r * Math.sin((18+i*72)/180*Math.PI));
-                    ctx.lineTo(p.x + (r/2.2) * Math.cos((54+i*72)/180*Math.PI), p.y - (r/2.2) * Math.sin((54+i*72)/180*Math.PI));
+
+                for (let i = 0; i < 5; i++) {
+
+                    const outerX = p.x + rr * Math.cos((18+i*72)/180*Math.PI);
+                    const outerY = p.y - rr * Math.sin((18+i*72)/180*Math.PI);
+
+                    if (i === 0) {
+                        ctx.moveTo(outerX, outerY);
+                    } else {
+                        ctx.lineTo(outerX, outerY);
+                    }
+
+                    ctx.lineTo(
+                        p.x + (rr/2.2) * Math.cos((54+i*72)/180*Math.PI),
+                        p.y - (rr/2.2) * Math.sin((54+i*72)/180*Math.PI)
+                    );
                 }
             } else if (s === 'heart') {
                 ctx.moveTo(p.x, p.y + r*0.8);
