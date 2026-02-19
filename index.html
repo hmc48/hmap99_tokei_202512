@@ -126,7 +126,7 @@ button.menu-sub-btn { flex: 1; padding: 8px; font-size: 11px; cursor: pointer; }
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
     const colorMap = {"赤": "red", "青": "blue", "オレンジ": "orange", "緑": "green", "茶": "brown", "黄": "yellow"};
-    const shapeMap = {"病院": "star", "診療所": "heart", "歯科": "club", "助産院": "square", "薬局": "spade"};
+    const shapeMap = {"一般病床が500床以上の病院": "star", "療養病床が100床以上の病院": "heart", "精神病床が200床以上の病院": "club", "結核病床がある病院": "square", "感染病床がある病院": "spade"};
 
     // 1. レンダラーの初期化（Canvasを使用）
     const myRenderer = L.canvas({ padding: 0.5 });
