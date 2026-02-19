@@ -422,7 +422,7 @@ button.menu-sub-btn { flex: 1; padding: 8px; font-size: 11px; cursor: pointer; }
     }).catch(e => {});
     
     // 初期読み込み実行
-    for(let i=1; i<=8; i++) { loadChome(i.toString().padStart(2, '0')); }
+    for(let i=1; i<=0; i++) { loadChome(i.toString().padStart(2, '0')); }
 
     document.querySelectorAll('.layer-toggle').forEach(cb => {
         cb.addEventListener('change', function() {
